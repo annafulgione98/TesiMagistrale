@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <title>Nocciola IGP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stile.css" type = "text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <script>
+        $(function(){
+            $("#navbar").load("headerAzienda.html");
+        });
+    </script>
+    <style>
+        .navbarNero {
+            font-family: Montserrat, sans-serif;
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 11px !important;
+            letter-spacing: 4px;
+        }
+
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            width: 200px;
+            height: 150px;
+        }
+
+    </style>
+
+</head>
+<body data-spy="scroll" data-target=".navbarNero" data-offset="50">
+
+<div id="navbar"></div>
+
+
+</div>
+    </div>
+
+
+    <fieldset style="margin-top:20px">
+        <legend>Esercitazioni</legend>
+        <button class="btn btn-primary" data-toggle="collapse" data-target="#richieste">&nbsp&nbspEsercitazioni in corso</button><br>
+        <!--se nel div di sotto metti class="collapse in" si apre al caricamento della pagina-->
+        <div id="richieste" class="collapse">
+            <br><input class="form-control" id="myInput" type="text" placeholder="Cerca ..."><br><br>
+            <legend>Esercitazioni in corso</legend>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Visualizza</th>
+                </tr>
+                </thead>
+                <tbody id="myTable">
+                <tr>
+                    <td>25/01/2023</td>
+                    <td><button type="button" class="btn btn-primary">Apri</button></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </fieldset>
+
+
+
+<fieldset style="margin-top:20px">
+
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#inCorso">&nbsp&nbspEsercitazioni da svolgere</button><br>
+    <!--se nel div di sotto metti class="collapse in" si apre al caricamento della pagina-->
+    <div id="inCorso" class="collapse">
+        <br><input class="form-control" id="inCorso" type="text" placeholder="Cerca ..."><br><br>
+        <legend>Esercitazioni in corso</legend>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Data</th>
+                <th>Visualizza</th>
+            </tr>
+            </thead>
+            <tbody id="inCorso">
+            <tr>
+                <td>25/01/2023</td>
+                <td><button type="button" class="btn btn-primary">Apri</button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</fieldset>
+
+<fieldset style="margin-top:20px">
+
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#svolte">&nbsp&nbspEsercitazioni svolte</button><br>
+    <!--se nel div di sotto metti class="collapse in" si apre al caricamento della pagina-->
+    <div id="svolte" class="collapse">
+        <br><input class="form-control" id="svolte" type="text" placeholder="Cerca ..."><br><br>
+        <legend>Esercitazioni in corso</legend>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Data</th>
+                <th>Visualizza</th>
+            </tr>
+            </thead>
+            <tbody id="svolte">
+            <tr>
+                <td>25/01/2023</td>
+                <td><button type="button" class="btn btn-primary">Apri</button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</fieldset>
+
+
+</body>
+</html>
