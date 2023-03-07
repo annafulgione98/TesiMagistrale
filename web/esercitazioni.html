@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Nocciola IGP</title>
+    <title>Esercitazioni</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,6 +47,10 @@
         }
 
     </style>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body data-spy="scroll" data-target=".navbarNero" data-offset="50">
@@ -96,13 +100,40 @@
             <thead>
             <tr>
                 <th>Data</th>
-                <th>Visualizza</th>
+                <th>Inizia</th>
             </tr>
             </thead>
             <tbody id="inCorso">
             <tr>
                 <td>25/01/2023</td>
-                <td><button type="button" class="btn btn-primary">Apri</button></td>
+                <div class="container mt-3" align="center">
+
+                    <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Inizia
+                    </button> </td>
+                </div>
+
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+
+                            <div class="modal-body" align="center">
+                                <p class="text-success">Salvataggio avvenuto con successo </p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </tr>
             </tbody>
         </table>
@@ -116,18 +147,47 @@
     <!--se nel div di sotto metti class="collapse in" si apre al caricamento della pagina-->
     <div id="svolte" class="collapse">
         <br><input class="form-control" id="svolte" type="text" placeholder="Cerca ..."><br><br>
-        <legend>Esercitazioni in corso</legend>
+        <legend>Esercitazioni svolte</legend>
         <table class="table table-striped">
             <thead>
             <tr>
                 <th>Data</th>
                 <th>Visualizza</th>
+                <th>Ripeti</th>
             </tr>
             </thead>
             <tbody id="svolte">
             <tr>
                 <td>25/01/2023</td>
-                <td><button type="button" class="btn btn-primary">Apri</button></td>
+                <td>Visualizza</td>
+                <div class="container mt-3" align="center">
+
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ripetiModal">
+                        Ripeti
+                    </button></td>
+                </div>
+
+                <div class="modal" id="ripetiModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+
+                            <div class="modal-body" align="center">
+                                <p class="text-success">Salvataggio avvenuto con successo </p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </tr>
             </tbody>
         </table>

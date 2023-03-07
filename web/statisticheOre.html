@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+    <title>StatisticheOre</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stile.css" type = "text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function(){
+            $("#navbar").load("headerAzienda.html");
+        });
+    </script>
+    <style>
+        .navbarNero {
+            font-family: Montserrat, sans-serif;
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 11px !important;
+            letter-spacing: 4px;
+        }
+        .tabcontentverticale {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+
+</head>
+<body data-spy="scroll" data-target=".navbarNero" data-offset="50">
+
+<div id="navbar"></div>
+
+<div class="contorno img-1" >
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-0 bread">Statistiche Ore impiegate</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="toast show" style="border-color: blue">
+                <div class="toast-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th><label class="mioLabel">Occupati della Scuola Primaria Matteo Mari. </label></th>
+                            <th><i class="glyphicon glyphicon-envelope icone" style="font-size:40px;color:blue;"></i></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Via Roma, 7, Salerno</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> <br>
+
+        </div>
+        <div class="col-sm-8">
+            <div class="myDivForMap">
+                <div id="map"> </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+
+        </div>
+    </div>
+</div>
+
+<div class="contenitoreRegistro" style="margin-top:20px">
+    <div class="btn-group divDataRegistri">
+        <label for="azienda">Seleziona la simulazione:</label>
+        <span><select name="azienda" id="azienda" class="btn btn-secondary">
+                <option value="uno">25/01/2023</option>
+                <option value="due">10/12/2022</option>
+                <option value="tre">02/11/2022</option>
+                <option value="quattro">13/09/2022</option>
+            </select>
+            <button id="cerca" class="btn btn-primary">Cerca</button></span>
+    </div>
+    <div class="row">
+        <div class="col-sm-7">
+            <canvas id="myChart" class="grafico"></canvas>
+        </div>
+        <div class="col-sm-5">
+            <h2> Ore impiegate per completare l'esercitazione </h2>
+            <p>Il seguente grafico rileva le statistiche ottenute in seguito all'esecuzione di una simulazione.
+               In particolare si considera il tempo impiegato da ciascuna squadra per finire la simulazione. <br>
+                Rosa, ha impiegato 60 minuti<br>
+                Giuseppe, ha impiegato 60 minuti<br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Rosa','Giuseppe'],
+        datasets: [{
+            label:'Minuti',
+            data: [60,30],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)'
+
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            display: true,
+            text: 'Esercitazione'
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Responsabili'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Minuti'
+                }
+            }]
+        }
+    }
+});</script>
+</body>
+</html>

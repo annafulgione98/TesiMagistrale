@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <title>Nocciola IGP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stile.css" type = "text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar").load("headerConsorzio2.html");
+        });
+    </script>
+    <style>
+        .navbarNero {
+            font-family: Montserrat, sans-serif;
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 11px !important;
+            letter-spacing: 4px;
+        }
+        .tabcontentverticale {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+
+</head>
+<body data-spy="scroll" data-target=".navbarNero" data-offset="50">
+
+<div id="navbar"></div>
+
+<div class="contorno img-1" >
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-0 bread">Statistiche Produzione</h1>
+        </div>
+    </div>
+</div>
+<!-- registro -->
+<div class="contenitoreRegistro">
+    <div class="btn-group divButtonRegistri">
+        <div class="tabPage">
+            <button class="tablinksPage" onclick="openPage(event, 'Singola')" id="defaultOpenPage" >Singola Azienda</button>
+            <button class="tablinksPage" onclick="openPage(event, 'Tutte')">Tutte le Aziende</button>
+        </div>
+    </div><br>
+
+    <div id="Singola" class="tabcontentverticale">
+        <div class="btn-group divDataRegistri">
+            <label for="azienda">Seleziona la simulazione:</label>
+            <span><select name="azienda" id="azienda" class="btn btn-secondary">
+                 <option value="uno">25/01/2023</option>
+                <option value="due">10/12/2022</option>
+                <option value="tre">02/11/2022</option>
+                <option value="quattro">13/09/2022</option>
+            </select>
+            <button id="cerca" class="btn btn-primary">Cerca</button></span>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-7">
+                <canvas id="myChart" class="grafico"></canvas>
+            </div>
+            <div class="col-sm-5">
+                <h2> Persone ritrovate </h2>
+                <p>Il seguente grafico rileva le persone ritrovate con il passare del tempo, in particolare si visualizzano
+                    gli aggiornamenti ogni 60 minuti. <br>
+
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="Tutte" class="tabcontentverticale">
+        <div class="row">
+            <div class="col-sm-7">
+                <canvas id="produzioneAziende" class="grafico"></canvas>
+            </div>
+            <div class="col-sm-5">
+                <h2> Persone ritrovate </h2>
+                <p>Il seguente grafico rileva le persone ritrovate con il passare del tempo, in particolare si visualizzano
+                    gli aggiornamenti ogni 60 minuti. <br>
+
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<script src="js/statisticheProduzione.js"></script>
+</body>
+</html>
