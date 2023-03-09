@@ -34,137 +34,127 @@
 </head>
 <body>
 
-<div class="container-fluid p-5 bg-primary text-white text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+  <div class="container-fluid" >
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" href="#">Esercitazioni</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Statistiche</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Log-out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row no-gutters slider-text align-items-center justify-content-center">
+  <div class="col-md-9 ftco-animate text-center">
+    <h2 class="mb-0 bread">Statistiche </h2><br>
+    <div class="btn-group divDataRegistri">
+      <table >
+        <thead>
+        <tr>
+          <th><label for="azienda">Seleziona la simulazione:&nbsp</label></th>
+          <th><span><select name="azienda" id="azienda" class="btn btn-primary" style="padding:0px">
+                <option value="uno">25/01/2023</option>
+                <option value="due">10/12/2022</option>
+                <option value="tre">02/11/2022</option>
+                <option value="quattro">13/09/2022</option>
+          </select></span></th>
+          <th><span><button id="cerca" class="btn btn-primary"style="padding:0px">Cerca</button></span></th>
+        </tr>
+        </thead>
+      </table>
+
+  </div>
+  </div>
+
 </div>
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-6">
-
-      <fieldset style="margin-top:20px">
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#richieste">&nbsp&nbspRosa</button><br>
+    <div class="col-sm-4">
+       <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#richieste">&nbsp&nbspRosa</button><br>
         <!--se nel div di sotto metti class="collapse in" si apre al caricamento della pagina-->
         <div id="richieste" class="collapse">
-          <div class="row">
-            <div class="col-sm-2">
               <div class="toast show" style="border-color: blue">
-
                 <div class="toast-body">
                   <table >
                     <thead>
                     <tr>
                       <th><label class="mioLabel"> <h4>Dati</h4> 110 bambini <br> Salerno, via Roma</label></th>
                     </tr>
-
-                    <tr>
-                      <th><label>Ritrovati: 110</label>
-                    </tr>
-
-                    <tr>
-                      <th><label>Feriti: 30</label>
-                    </tr>
-
+                    <tr><th><label>Ritrovati: 110</label></tr>
+                    <tr><th><label>Feriti: 30</label></tr>
                     <tr>
                       <th><label><h5>Feriti ospedalizzati</h5> <br> Numero: 10
                       </label>
-
                     </tr>
                     <th><label>Luogo: Ospedale Gaetano Fucito</label>
-                    </th>
-                    </tr>
-                    </tr>
+                    </th></tr></tr>
                     </thead>
                   </table>
                 </div>
               </div> <br>
-            </div>
-          </div>
+        </div><br>
 
-        </div>
-      </fieldset>
-
-      <fieldset style="margin-top:20px">
         <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#giuseppe">&nbsp&nbspGiuseppe</button><br>
         <!--se nel div di sotto metti class="collapse in" si apre al caricamento della pagina-->
         <div id="giuseppe" class="collapse">
-          <div class="row">
-            <div class="col-sm-2">
               <div class="toast show" style="border-color: blue">
 
                 <div class="toast-body">
                   <table >
                     <thead>
-                    <tr>
-                      <th><label class="mioLabel"> <h4>Dati</h4> 100 bambini <br> Salerno, via Roma</label></th>
-                    </tr>
-
-                    <tr>
-                      <th><label>Ritrovati: 100</label>
-                    </tr>
-
-                    <tr>
-                      <th><label>Feriti: 20</label>
-                    </tr>
-
-                    <tr>
-                      <th><label><h5>Feriti ospedalizzati</h5> <br> Numero: 5
-                      </label>
-
-                    </tr>
-                    <th><label>Luogo: Ospedale Gaetano Fucito </label>
-                    </th>
-                    </tr>
-                    </tr>
-
+                      <tr><th><label class="mioLabel"> <h4>Dati</h4> 100 bambini <br> Salerno, via Roma</label></th></tr>
+                      <tr><th><label>Ritrovati: 100</label></tr>
+                      <tr><th><label>Feriti: 20</label></tr>
+                      <tr><th><label><h5>Feriti ospedalizzati</h5> <br> Numero: 5</label></tr>
+                      <th><label>Luogo: Ospedale Gaetano Fucito </label>
+                      </th></tr></tr>
                     </thead>
                   </table>
                 </div>
               </div> <br>
-            </div>
-          </div>
-
         </div>
-      </fieldset>
 
     </div>
 
-    <div class="col-sm-6">
-      <div class="contorno img-1" >
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-0 bread">Statistiche Ore impiegate</h1>
-          </div>
-        </div>
-      </div>
-
+    <div class="col-sm-8">
       <div class="contenitoreRegistro" style="margin-top:20px">
-        <div class="btn-group divDataRegistri">
-          <label for="azienda">Seleziona la simulazione:</label>
-          <span><select name="azienda" id="azienda" class="btn btn-secondary">
-                <option value="uno">25/01/2023</option>
-                <option value="due">10/12/2022</option>
-                <option value="tre">02/11/2022</option>
-                <option value="quattro">13/09/2022</option>
-            </select>
-            <button id="cerca" class="btn btn-primary">Cerca</button></span>
-        </div>
         <div class="row">
           <div class="col-sm-7">
-            <canvas id="myChart" class="grafico"></canvas>
+            <canvas id="myChart" class="grafico"></canvas><br>
           </div>
           <div class="col-sm-5">
-            <h2> Ore impiegate per completare l'esercitazione </h2>
+            <h4> Ore impiegate per completare l'esercitazione </h4>
             <p>Il seguente grafico rileva le statistiche ottenute in seguito all'esecuzione di una simulazione.
               In particolare si considera il tempo impiegato da ciascuna squadra per finire la simulazione. <br>
               Rosa, ha impiegato 60 minuti<br>
               Giuseppe, ha impiegato 60 minuti<br>
             </p>
           </div>
+          <div class="col-sm-7">
+            <canvas id="myChart2" class="grafico"></canvas>
+          </div>
+          <div class="col-sm-5">
+            <h4> Persone ritrovate </h4>
+            <p>Il seguente grafico rileva le persone ritrovate con il passare del tempo, in particolare si visualizzano
+              gli aggiornamenti ogni 60 minuti. <br>
+
+            </p>
+          </div>
         </div>
       </div>
-
+    </div>
+  </div>
+</div>
       <script>var ctx = document.getElementById('myChart').getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'bar',
@@ -172,15 +162,15 @@
           labels: ['Rosa','Giuseppe'],
           datasets: [{
             label:'Minuti',
-            data: [60,30],
+            data: [60,31],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(255, 99, 132, 0.2)'
+              'rgba(67,107,196,0.2)',
+              'rgba(67,107,196,0.2)'
 
             ],
             borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(255, 99, 132, 1)'
+              'rgb(17,63,147)',
+              'rgb(17,63,147)'
 
             ],
             borderWidth: 2
@@ -217,10 +207,54 @@
             }]
           }
         }
+      });
+      var ctx = document.getElementById('myChart2').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['60', '120', '180', '240', '300', '360'],
+          datasets: [{
+            label: 'Ritrovati',
+            data: [10, 3, 11, 7, 23, 50],
+            backgroundColor: ['rgba(67,107,196,0.2)'],
+            borderColor: ['rgb(17,63,147)'],
+            borderWidth: 2,
+            fill: false,
+          }]
+        },
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: 'Simulazione'
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false,
+          },
+          hover: {
+            mode: 'nearest',
+            intersect: true
+          },
+          scales: {
+            xAxes: [{
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'Minuti'
+              }
+            }],
+            yAxes: [{
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'Ritrovati'
+              }
+            }]
+          }
+        }
       });</script>
-    </div>
-  </div>
-</div>
+
 
 </body>
 </html>
