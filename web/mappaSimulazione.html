@@ -20,7 +20,13 @@
           integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
           crossorigin=""></script>
   <style>
+    .giallo {
+      background-color: yellow;
+      width: 20px;
+      border-radius:50%;
+      height: 20px;
 
+    }
     #map { height: 700px; }
     .icone{
       padding:5%;
@@ -54,11 +60,11 @@
 
 <div class="container mt-5">
   <div class="row">
+    <!--colonna sinistra-->
     <div class="col-sm-2">
       <div class="toast show" style="border-color: blue">
-
         <div class="toast-body">
-           <table >
+           <table>
               <thead>
               <tr>
                 <th><label class="mioLabel">Occupati della Scuola Primaria Matteo Mari. <br>Via Roma, 7. Salerno </label></th>
@@ -66,18 +72,240 @@
               </tr>
               </thead>
            </table>
+         </div>
+      </div> <br>
 
+      <div class="toast show" style="border-color: blue">
+        <div class="toast-body">
+          <table>
+            <thead>
+            <tr>
+              <th><label class="mioLabel"> <h4>Dati</h4> 100 bambini <br> Ancora dispersi 50 </label></th>
+            </tr>
+
+            <tr>
+              <th><label for="ritrovati">Ritrovati:</label>
+                <input type="number" class="form-control" id="ritrovati" placeholder="" name="ritrovati"></th>
+            </tr>
+
+            <tr>
+              <th><label for="feriti">Feriti:</label>
+                <input type="number" class="form-control" id="feriti" placeholder="" name="feriti"></th>
+            </tr>
+
+            <tr>
+              <th><label for="feritiosp"><h5>Feriti ospedalizzati</h5> <br> Numero:
+                <input type="text" class="form-control" id="feritiosp" placeholder="" name="feritiosp">
+              </label>
+            </tr>
+            <th><label for="luogo">Luogo:</label>
+              <input type="text" class="form-control" id="luogo" placeholder="" name="luogo"><br></th>
+            </th>
+            </tr>
+            </tr>
+
+            <tr>
+              <th>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                  Salva
+                </button>
+              </th>
+            </tr>
+
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body" align="center">
+                    <p class="text-success">Salvataggio avvenuto con successo </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </thead>
+          </table>
         </div>
       </div> <br>
 
-    </div>
+      <div class="toast show" style="border-color: blue">
+
+        <div class="toast-body">
+          <table >
+            <thead>
+            <tr><th><label class="mioLabel"> <h4>Dati</h4> 20 adulti <br> Ancora dispersi 5 </label></th></tr>
+            <tr>
+              <th><label for="ritrovati2">Ritrovati:</label>
+                <input type="number" class="form-control" id="ritrovati2" placeholder="" name="ritrovati2"></th>
+            </tr>
+            <tr>
+              <th><label for="feriti2">Feriti:</label>
+                <input type="number" class="form-control" id="feriti2" placeholder="" name="feriti2"></th>
+            </tr>
+            <tr>
+              <th><label for="feritiosp2"><h5>Feriti ospedalizzati</h5> <br> Numero:
+                <input type="text" class="form-control" id="feritiosp2" placeholder="" name="feritiosp2">
+              </label>
+            </tr>
+            <th><label for="luogo2">Luogo:</label><input type="text" class="form-control" id="luogo2" placeholder="" name="luogo2"><br></th>
+            </th>
+            </tr>
+            </tr>
+            <tr>
+              <th><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Salva</button></th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+      </div> <br>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fine">Fine simulazione</button>
+
+      <div class="modal" id="fine">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" align="center">
+              <p class="text-success">Simulazione conclusa con successo </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+   </div>
+    <!--colonna centrale contenente mappa-->
     <div class="col-sm-8">
       <div class="myDivForMap">
         <div id="map"> </div>
       </div>
     </div>
+    <!--colonna destra-->
     <div class="col-sm-2">
+      <div class="toast show" style="border-color: blue">
+        <div class="toast-body">
+          <table>
+            <thead>
+            <tr>
+              <th><label class="mioLabel">Occupati della Scuola Media Statale Salvatore Quasimodo. <br>Via Roma, 7. Salerno </label></th>
+              <th><i class="glyphicon glyphicon-envelope icone" style="font-size:40px;color:blue;"></i></th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+      </div> <br>
+      <div class="toast show" style="border-color: blue">
+        <div class="toast-body">
+          <table>
+            <thead>
+            <tr>
+              <th><label class="mioLabel"> <h4>Dati</h4> 110 bambini <br> Ancora dispersi 50 </label></th>
+            </tr>
 
+            <tr>
+              <th><label for="ritrovati3">Ritrovati:</label>
+                <input type="number" class="form-control" id="ritrovati3" placeholder="" name="ritrovati3"></th>
+            </tr>
+
+            <tr>
+              <th><label for="feriti3">Feriti:</label>
+                <input type="number" class="form-control" id="feriti3" placeholder="" name="feriti3"></th>
+            </tr>
+
+            <tr>
+              <th><label for="feritiosp3"><h5>Feriti ospedalizzati</h5> <br> Numero:
+                <input type="text" class="form-control" id="feritiosp3" placeholder="" name="feritiosp3">
+              </label>
+            </tr>
+            <th><label for="luogo3">Luogo:</label>
+              <input type="text" class="form-control" id="luogo3" placeholder="" name="luogo3"><br></th>
+            </th>
+            </tr>
+            </tr>
+
+            <tr>
+              <th>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
+                  Salva
+                </button>
+              </th>
+            </tr>
+
+            <div class="modal" id="myModal2">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body" align="center">
+                    <p class="text-success">Salvataggio avvenuto con successo </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </thead>
+          </table>
+        </div>
+      </div> <br>
+
+      <div class="toast show" style="border-color: blue">
+
+        <div class="toast-body">
+          <table >
+            <thead>
+            <tr><th><label class="mioLabel"> <h4>Dati</h4> 30 adulti <br> Ancora dispersi 25 </label></th></tr>
+            <tr>
+              <th><label for="ritrovati4">Ritrovati:</label>
+                <input type="number" class="form-control" id="ritrovati4" placeholder="" name="ritrovati4"></th>
+            </tr>
+            <tr>
+              <th><label for="feriti4">Feriti:</label>
+                <input type="number" class="form-control" id="feriti4" placeholder="" name="feriti4"></th>
+            </tr>
+            <tr>
+              <th><label for="feritiosp4"><h5>Feriti ospedalizzati</h5> <br> Numero:
+                <input type="text" class="form-control" id="feritiosp4" placeholder="" name="feritiosp4">
+              </label>
+            </tr>
+            <th><label for="luogo4">Luogo:</label><input type="text" class="form-control" id="luogo4" placeholder="" name="luogo4"><br></th>
+            </th>
+            </tr>
+            </tr>
+            <tr>
+              <th><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Salva</button></th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+      </div> <br>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fine2">Fine simulazione</button>
+
+      <div class="modal" id="fine2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" align="center">
+              <p class="text-success">Simulazione conclusa con successo </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -92,6 +320,10 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
   var markerRosa = L.marker([40.677724, 14.765899]).addTo(map);
+  markerRosa.bindPopup("<b>Dispersi</b><br><table>\n" +
+          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp25 adulti, 50%</td></tr>\n" +
+          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 45%</td></tr>\n" +
+          "</table>");
   var circleRosa = L.circle([40.677724, 14.765899], {
     color: '#c6a9ea',
     fillColor: '#c6a9ea',
@@ -100,6 +332,10 @@
   }).addTo(map);
 
   var markerGiuseppe = L.marker([40.67656681540903, 14.767214906170361]).addTo(map);
+  markerGiuseppe.bindPopup("<b>Dispersi</b><br><table>\n" +
+          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp5 adulti, 25%</td></tr>\n" +
+          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 50%</td></tr>\n" +
+          "</table>");
   var circleGiuseppe = L.circle([40.67656681540903, 14.767214906170361], {
     color: '#acc4f7',
     fillColor: '#acc4f7',
