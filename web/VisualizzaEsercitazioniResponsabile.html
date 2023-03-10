@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -16,31 +17,17 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
     <style>
 
         #map { height: 700px; }
     </style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
-    </div>
-</nav>
 
 <div class="container mt-5">
     <div class="row">
@@ -49,22 +36,61 @@
             <div class="" style="text-align: center">
                 <img src="WEB-INF/img/logo.jpeg" class="w3-round" alt="person image" width="150px" height="150px" style="border-radius: 50%; border: 5px solid #4ab6e0 !important; margin-top: 16px;">
                 <p class="name"><br><span class="w3-padding w3-theme-l1 w3-margin w3-round" style="font-weight: bolder; font-size: x-large; ">Esercitazione del 25/01/23</span></p><br>
-            </div>
-            <p>Scuola primaria Matteo Mari, Salerno, via Roma, 7</p>
-            100 bambini<br>
-            20 adulti<br>
 
+            </div><a href="VisualizzaStoricoEsercitazioniResponsabile.html" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i></a><br><br>
+            <div class="toast show" style="border-color: blue">
 
-
-
+                <div class="toast-body">
+                    <table >
+                        <thead>
+                        <tr><th><label class="mioLabel"> <h4>Dati</h4> 100 bambini <br> Salerno, via Roma</label></th></tr>
+                        <tr><th><label>Ritrovati: 100</label></tr>
+                        <tr><th><label>Feriti: 20</label></tr>
+                        <tr>
+                            <th><label><h5>Ore 10:00</h5></label> </th>
+                        </tr>
+                        <tr>
+                            <th><label>Ritrovati: 15</label> </th>
+                        </tr>
+                        <tr>
+                            <th><label>Feriti ospedalizzati</label> </th>
+                        </tr>
+                        <tr>
+                            <th><label> Numero: 10</label></th>
+                        </tr>
+                        <tr>
+                            <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
+                        </tr>
+                        <tr>
+                            <th><label><h5>Ore 11:00</h5></label> </th>
+                        </tr>
+                        <tr>
+                            <th><label>Ritrovati: 5</label> </th>
+                        </tr>
+                        <tr>
+                            <th><label>Feriti ospedalizzati</label> </th>
+                        </tr>
+                        <tr>
+                            <th><label> Numero: 5</label></th>
+                        </tr>
+                        <tr>
+                            <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
+                        </tr>
+                        </th></tr></tr>
+                        </thead>
+                    </table>
+                </div>
+            </div> <br>
 
         </div>
+
         <!--colonna centro con mappa-->
         <div class="col-sm-8">
             <div class="myDivForMap">
                 <div id="map"> </div>
             </div>
         </div>
+
         <!--colonna destra -->
         <div class="col-sm-2">
             <div class="" style="text-align: center">
@@ -79,9 +105,61 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <canvas id="myChart" class="grafico"></canvas>
+        </div>
+    </div>
 </div>
 <script>
-
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['60', '120', '180'],
+            datasets: [{
+                label: 'Ritrovati',
+                data: [10, 3, 11, 7, 23, 50],
+                backgroundColor: ['rgba(67,107,196,0.2)'],
+                borderColor: ['rgb(17,63,147)'],
+                borderWidth: 2,
+                fill: false,
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Simulazione'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Minuti'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Ritrovati'
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+<script>
     //mappa
     var map = L.map('map').setView([40.676823, 14.766442], 18);
 

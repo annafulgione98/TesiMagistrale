@@ -41,10 +41,10 @@
         <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="aggiungiSimulazione.html">Esercitazioni</a>
+        <a class="nav-link" href="aggiungiSimulazione.html"> Nuova Esercitazioni</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="statisticheAddestratore.html">Statistiche</a>
+        <a class="nav-link" href="esercitazioni.html">Esercitazioni</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="login.html">Log-out</a>
@@ -93,11 +93,35 @@
                     <tr><th><label>Ritrovati: 110</label></tr>
                     <tr><th><label>Feriti: 30</label></tr>
                     <tr>
-                      <th><label><h5>Feriti ospedalizzati</h5> <br> Numero: 10
-                      </label>
+                      <th><label><h5>Ore 10:00</h5></label> </th>
                     </tr>
-                    <th><label>Luogo: Ospedale Gaetano Fucito</label>
-                    </th></tr></tr>
+                    <tr>
+                      <th><label>Ritrovati: 10</label> </th>
+                    </tr>
+                    <tr>
+                      <th><label>Feriti ospedalizzati</label> </th>
+                    </tr>
+                    <tr>
+                      <th><label> Numero: 10</label></th>
+                    </tr>
+                    <tr>
+                        <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
+                    </tr>
+                    <tr>
+                      <th><label><h5>Ore 11:00</h5></label> </th>
+                    </tr>
+                    <tr>
+                      <th><label>Ritrovati: 5</label> </th>
+                    </tr>
+                    <tr>
+                      <th><label>Feriti ospedalizzati</label> </th>
+                    </tr>
+                    <tr>
+                      <th><label> Numero: 5</label></th>
+                    </tr>
+                    <tr>
+                      <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
+                    </tr>
                     </thead>
                   </table>
                 </div>
@@ -115,8 +139,36 @@
                       <tr><th><label class="mioLabel"> <h4>Dati</h4> 100 bambini <br> Salerno, via Roma</label></th></tr>
                       <tr><th><label>Ritrovati: 100</label></tr>
                       <tr><th><label>Feriti: 20</label></tr>
-                      <tr><th><label><h5>Feriti ospedalizzati</h5> <br> Numero: 5</label></tr>
-                      <th><label>Luogo: Ospedale Gaetano Fucito </label>
+                      <tr>
+                        <th><label><h5>Ore 10:00</h5></label> </th>
+                      </tr>
+                      <tr>
+                        <th><label>Ritrovati: 15</label> </th>
+                      </tr>
+                      <tr>
+                        <th><label>Feriti ospedalizzati</label> </th>
+                      </tr>
+                      <tr>
+                        <th><label> Numero: 10</label></th>
+                      </tr>
+                      <tr>
+                        <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
+                      </tr>
+                      <tr>
+                        <th><label><h5>Ore 11:00</h5></label> </th>
+                      </tr>
+                      <tr>
+                        <th><label>Ritrovati: 5</label> </th>
+                      </tr>
+                      <tr>
+                        <th><label>Feriti ospedalizzati</label> </th>
+                      </tr>
+                      <tr>
+                        <th><label> Numero: 5</label></th>
+                      </tr>
+                      <tr>
+                        <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
+                      </tr>
                       </th></tr></tr>
                     </thead>
                   </table>
@@ -214,13 +266,22 @@
         data: {
           labels: ['60', '120', '180', '240', '300', '360'],
           datasets: [{
-            label: 'Ritrovati',
-            data: [10, 3, 11, 7, 23, 50],
-            backgroundColor: ['rgba(67,107,196,0.2)'],
-            borderColor: ['rgb(17,63,147)'],
+            label: 'Rosa',
+            data: [10, 3, 11, 7, 23, 5],
+            backgroundColor: ['rgba(210,155,238,0.2)'],
+            borderColor: ['rgb(220,54,241)'],
             borderWidth: 2,
             fill: false,
-          }]
+          },
+          {
+            label: 'Giuseppe',
+            data: [10, 5, 10, 7, 20, 10],
+            backgroundColor: ['rgba(67,107,196,0.2)'],
+            borderColor: ['rgb(28,109,253)'],
+            borderWidth: 2,
+            fill: false,
+          }
+          ]
         },
         options: {
           responsive: true,
