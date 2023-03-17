@@ -34,296 +34,27 @@
     }
     .mioLabel, .icone { display: inline; }
     .mioLabel{
-      font-size: 10px;
+      font-size: 12px;
     }
   </style>
 </head>
 <body>
 
 
-<div class="container mt-5">
-  <div class="row">
-    <!--colonna sinistra-->
-    <div class="col-sm-2">
-      <div class="toast show" style="border-color: blue">
-        <div class="toast-body">
-          <table>
-            <thead>
-            <tr>
-              <th><label class="mioLabel">Aiuta il responsabile Rosa <br>Via Roma, 7. Salerno </label></th>
-              <th><i class="fa fa-envelope icone" style="font-size:50px;color:blue;"></i> </th>
-            </tr>
-            </thead>
-          </table>
-        </div>
-      </div> <br>
+<div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary" data-bs-toggle="popover2" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti">Chiedi aiuto</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="popover1" title="Simulazione terminata" data-bs-content="Simulazione terminata">Fine Simulazione</button>
 
-      <div class="toast show" style="border-color: blue">
-        <div class="toast-body">
-          <table>
-            <thead>
-            <tr>
-              <th><label class="mioLabel"> <h4>Dati</h4> 110 bambini <br> Ancora dispersi 50 </label></th>
-            </tr>
-
-            <tr>
-              <th><label for="ritrovati">Ritrovati:</label>
-                <input type="number" class="form-control" id="ritrovati" placeholder="" name="ritrovati"></th>
-            </tr>
-
-            <tr>
-              <th><label for="feriti">Feriti:</label>
-                <input type="number" class="form-control" id="feriti" placeholder="" name="feriti"></th>
-            </tr>
-
-            <tr>
-              <th><label for="feritiosp"><h5>Feriti ospedalizzati</h5> <br> Numero:
-                <input type="text" class="form-control" id="feritiosp" placeholder="" name="feritiosp">
-              </label>
-            </tr>
-            <th><label for="luogo">Luogo:</label>
-              <input type="text" class="form-control" id="luogo" placeholder="" name="luogo"><br></th>
-            </th>
-            </tr>
-            </tr>
-            <tr>
-              <th>
-                <button type="button" onclick="successo1()" class="btn btn-primary" style="width: 100%">Salva</button>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <p id="successo1" class="text-success"></p>
-              </th>
-            </tr>
-            </thead>
-          </table>
-        </div>
-      </div> <br>
-
-      <div class="toast show" style="border-color: blue">
-
-        <div class="toast-body">
-          <table >
-            <thead>
-            <tr><th><label class="mioLabel"> <h4>Dati</h4> 20 adulti <br> Ancora dispersi 5 </label></th></tr>
-            <tr>
-              <th><label for="ritrovati2">Ritrovati:</label>
-                <input type="number" class="form-control" id="ritrovati2" placeholder="" name="ritrovati2"></th>
-            </tr>
-            <tr>
-              <th><label for="feriti2">Feriti:</label>
-                <input type="number" class="form-control" id="feriti2" placeholder="" name="feriti2"></th>
-            </tr>
-            <tr>
-              <th><label for="feritiosp2"><h5>Feriti ospedalizzati</h5> <br> Numero:
-                <input type="text" class="form-control" id="feritiosp2" placeholder="" name="feritiosp2">
-              </label>
-            </tr>
-            <th><label for="luogo2">Luogo:</label><input type="text" class="form-control" id="luogo2" placeholder="" name="luogo2"><br></th>
-            </th></tr></tr>
-            <tr>
-              <th>
-                <button type="button" onclick="successo2()" class="btn btn-primary" style="width: 100%">Salva</button>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <p id="successo2" class="text-success"></p>
-              </th>
-            </tr>
-            </thead>
-          </table>
-        </div>
-      </div> <br>
-      <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti" style="width: 100%">
-        Chiedi aiuto
-      </button><br><br>
-      <a href="homeCollaborazione.html" class="btn btn-primary" style="width: 100%">Fine simulazione</a><br>
-      <br>
-      <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#visualizzaDati" style="width: 100%">Visualizza dati inviati </button>
-      <div id="visualizzaDati" class="collapse">
-        <div class="toast show" style="border-color: blue">
-
-          <div class="toast-body">
-            <table >
-              <thead>
-              <tr><th><label class="mioLabel"> <h4>Dati</h4> 100 bambini <br> Salerno, via Roma</label></th></tr>
-              <tr><th><label>Ritrovati: 20</label></tr>
-              <tr><th><label>Feriti: 10</label></tr>
-              <tr>
-                <th><label><h5>Ore 10:00</h5></label> </th>
-              </tr>
-              <tr>
-                <th><label>Ritrovati: 5</label> </th>
-              </tr>
-              <tr>
-                <th><label>Feriti ospedalizzati</label> </th>
-              </tr>
-              <tr>
-                <th><label> Numero: 2</label></th>
-              </tr>
-              <tr>
-                <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
-              </tr>
-              <tr>
-                <th><label><h5>Ore 11:00</h5></label> </th>
-              </tr>
-              <tr>
-                <th><label>Ritrovati: 5</label> </th>
-              </tr>
-              <tr>
-                <th><label>Feriti ospedalizzati</label> </th>
-              </tr>
-              <tr>
-                <th><label> Numero: 5</label></th>
-              </tr>
-              <tr>
-                <th><label>Luogo: Ospedale Gaetano Fucito</label></th>
-              </tr>
-              </th></tr></tr>
-              </thead>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!--colonna centrale contenente mappa-->
-    <div class="col-sm-8">
-      <div class="myDivForMap">
-        <div id="map"> </div>
-      </div>
-    </div>
-    <!--colonna destra-->
-    <div class="col-sm-2">
-      <div class="toast show" style="border-color: blue">
-        <div class="toast-body">
-          <table>
-            <thead>
-            <tr>
-              <th><label class="mioLabel">Ora può aiutarti il responsabile Giuseppe. Occupati della Scuola Media Statale Salvatore Quasimodo.<br>Via Roma, 7. Salerno </label></th>
-              <th><i class="fa fa-envelope icone" style="font-size:50px;color:blue;"></i></th>
-            </tr>
-            </thead>
-          </table>
-        </div>
-      </div> <br>
-      <div class="toast show" style="border-color: blue">
-        <div class="toast-body">
-          <table>
-            <thead>
-            <tr>
-              <th><label class="mioLabel"> <h4>Dati</h4> 110 bambini <br> Ancora dispersi 50 </label></th>
-            </tr>
-
-            <tr>
-              <th><label for="ritrovati3">Ritrovati:</label>
-                <input type="number" class="form-control" id="ritrovati3" placeholder="" name="ritrovati3"></th>
-            </tr>
-
-            <tr>
-              <th><label for="feriti3">Feriti:</label>
-                <input type="number" class="form-control" id="feriti3" placeholder="" name="feriti3"></th>
-            </tr>
-
-            <tr>
-              <th><label for="feritiosp3"><h5>Feriti ospedalizzati</h5> <br> Numero:
-                <input type="text" class="form-control" id="feritiosp3" placeholder="" name="feritiosp3">
-              </label>
-            </tr>
-            <th><label for="luogo3">Luogo:</label>
-              <input type="text" class="form-control" id="luogo3" placeholder="" name="luogo3"><br></th>
-            </th></tr></tr>
-
-            <tr>
-              <th>
-                <button type="button" onclick="successo3()" class="btn btn-primary" style="width: 100%">Salva</button>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <p id="successo3" class="text-success"></p>
-              </th>
-            </tr>
-            </thead>
-          </table>
-        </div>
-      </div> <br>
-
-      <div class="toast show" style="border-color: blue">
-
-        <div class="toast-body">
-          <table >
-            <thead>
-            <tr><th><label class="mioLabel"> <h4>Dati</h4> 30 adulti <br> Ancora dispersi 25 </label></th></tr>
-            <tr>
-              <th><label for="ritrovati4">Ritrovati:</label>
-                <input type="number" class="form-control" id="ritrovati4" placeholder="" name="ritrovati4"></th>
-            </tr>
-            <tr>
-              <th><label for="feriti4">Feriti:</label>
-                <input type="number" class="form-control" id="feriti4" placeholder="" name="feriti4"></th>
-            </tr>
-            <tr>
-              <th><label for="feritiosp4"><h5>Feriti ospedalizzati</h5> <br> Numero:
-                <input type="text" class="form-control" id="feritiosp4" placeholder="" name="feritiosp4">
-              </label>
-            </tr>
-            <th><label for="luogo4">Luogo:</label><input type="text" class="form-control" id="luogo4" placeholder="" name="luogo4"><br></th>
-            </th></tr></tr>
-            <tr>
-              <th>
-                <button type="button" onclick="successo4()" class="btn btn-primary" style="width: 100%">Salva</button>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <p id="successo4" class="text-success"></p>
-              </th>
-            </tr>
-            </thead>
-          </table>
-        </div>
-      </div> <br>
-      <button type="button" class="btn btn-primary" data-bs-toggle="popover2" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti" style="width: 100%">Chiedi aiuto</button><br><br>
-      <a href="homeCollaborazione.html" class="btn btn-primary" style="width: 100%">Fine simulazione</a><br><br>
-      <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#visualizzaDati2" style="width: 100%">Visualizza dati inviati </button>
-      <div id="visualizzaDati2" class="collapse">
-        <div class="toast show" style="border-color: blue">
-          <div class="toast-body">
-            <table >
-              <thead>
-              <tr><th><label class="mioLabel"> <h4>Dati</h4> 100 bambini <br> Salerno, via Roma</label></th></tr>
-              <tr><th><label>Ritrovati: 20</label></tr>
-              <tr><th><label>Feriti: 10</label></tr>
-              <tr><th><label><h5>Ore 10:00</h5></label> </th></tr>
-              <tr><th><label>Ritrovati: 5</label> </th></tr>
-              <tr><th><label>Feriti ospedalizzati</label> </th></tr>
-              <tr><th><label> Numero: 2</label></th></tr>
-              <tr><th><label>Luogo: Ospedale Gaetano Fucito</label></th></tr>
-              <tr><th><label><h5>Ore 11:00</h5></label> </th></tr>
-              <tr><th><label>Ritrovati: 5</label> </th></tr>
-              <tr><th><label>Feriti ospedalizzati</label> </th></tr>
-              <tr><th><label> Numero: 5</label></th></tr>
-              <tr><th><label>Luogo: Ospedale Gaetano Fucito</label></th></tr>
-              </th></tr></tr>
-              </thead>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+  <div class="myDivForMap">
+    <div id="map"> </div>
+  </div>
+
 </div>
+
+
 <script>
-  function prova() {
-    document.getElementById("mysuccesso").innerHTML = "Richiesta inviata";
-  }
-  function prova2() {
-    document.getElementById("mysuccesso2").innerHTML = "Richiesta inviata";
-  }
   function successo1() {
     document.getElementById("successo1").innerHTML = 'Dati salvati con successo';
   }
@@ -336,7 +67,8 @@
   function successo4() {
     document.getElementById("successo4").innerHTML = 'Dati salvati con successo';
   }
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover1"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
   })
@@ -353,11 +85,43 @@
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
-  var markerRosa = L.marker([40.677724, 14.765899]).addTo(map);
-  markerRosa.bindPopup("<b>Dispersi</b><br><table>\n" +
-          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp25 adulti, 50%</td></tr>\n" +
+
+  var markerRosaA = L.marker([40.677734, 14.765830]).addTo(map);
+  var markerRosaB = L.marker([40.677724, 14.765899]).addTo(map);
+  markerRosaA.bindPopup("<b>Dispersi</b><br><table>\n" +
+          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp25 adulti, 78%</td></tr>\n"  +
+          "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
+          "        <div class=\"toast-body\">\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati</h6> 30 adulti <br> Ancora dispersi 25 </label><br>\n" +
+          "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
+          "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"\" name=\"feriti\">\n" +
+          "          <label class=\"mioLabel\" for=\"feritiosp\">Feriti ospedalizzati  <br> Numero:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"\" name=\"feritiosp\">\n" +
+          "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
+          "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"\" name=\"luogo\"><br></th>\n" +
+          "          <button type=\"button\" onclick=\"successo1()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "          <p id=\"successo1\" class=\"text-success\"></p>\n" +
+          "        </div>\n" +
+          "      </div>");
+  markerRosaB.bindPopup("<h5>Dispersi</h5><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 45%</td></tr>\n" +
-          "</table>");
+          "</table><br><div class=\"toast show\" style=\"border-color: blue\">\n" +
+          "        <div class=\"toast-body\">\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati</h6> 110 bambini <br> Ancora dispersi 50 </label>\n" +
+          "          <label class=\"mioLabel\" for=\"ritrovati\"><br>Ritrovati:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
+          "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"\" name=\"feriti\">\n" +
+          "          <label class=\"mioLabel\" for=\"feritiosp\">Feriti ospedalizzati  <br> Numero:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"\" name=\"feritiosp\">\n" +
+          "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
+          "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"\" name=\"luogo\"><br></th>\n" +
+          "          <button type=\"button\" onclick=\"successo2()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "          <p id=\"successo2\" class=\"text-success\"></p>\n" +
+          "        </div>\n" +
+          "      </div> ");
   var circleRosa = L.circle([40.677724, 14.765899], {
     color: '#c6a9ea',
     fillColor: '#c6a9ea',
@@ -365,11 +129,44 @@
     radius: 10
   }).addTo(map);
 
-  var markerGiuseppe = L.marker([40.67656681540903, 14.767214906170361]).addTo(map);
-  markerGiuseppe.bindPopup("<b>Dispersi</b><br><table>\n" +
-          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp5 adulti, 25%</td></tr>\n" +
-          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 50%</td></tr>\n" +
-          "</table>");
+  var markerGiuseppeB = L.marker([40.67659505034865, 14.767130328471373]).addTo(map);
+  var markerGiuseppeA = L.marker([40.67656681540910, 14.767214906170361]).addTo(map);
+  markerGiuseppeB.bindPopup("<h5>Dispersi</h5><br><table>\n" +
+          " <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 50%</td></tr>\n" +
+          "</table><br><div class=\"toast show\" style=\"border-color: blue\">\n" +
+          "        <div class=\"toast-body\">\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati</h6> 100 bambini <br> Ancora dispersi 50 </label> <br>\n" +
+          "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
+          "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"\" name=\"feriti\">\n" +
+          "          <label class=\"mioLabel\" for=\"feritiosp\">Feriti ospedalizzati <br> Numero:\n </label>" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"\" name=\"feritiosp\">\n" +
+          "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
+          "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"\" name=\"luogo\"><br></th>\n" +
+          "          <button type=\"button\" onclick=\"successo3()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "          <p id=\"successo3\" class=\"text-success\"></p>\n" +
+          "        </div>\n" +
+          "      </div> <br>" +
+          "");
+  markerGiuseppeA.bindPopup("<b>Dispersi</b><br><table>\n" +
+          "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp5 adulti, 25%</td></tr>\n"  +
+          "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
+          "        <div class=\"toast-body\">\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati</h6> 20 adulti <br> Ancora dispersi 5 </label><br>\n" +
+          "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
+          "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"\" name=\"feriti\">\n" +
+          "          <label class=\"mioLabel\" for=\"feritiosp\">Feriti ospedalizzati  <br> Numero:</label>\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"\" name=\"feritiosp\">\n" +
+          "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
+          "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"\" name=\"luogo\"><br></th>\n" +
+          "          <button type=\"button\" onclick=\"successo4()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "          <p id=\"successo4\" class=\"text-success\"></p>\n" +
+          "        </div>\n" +
+          "      </div>" +
+          "");
   var circleGiuseppe = L.circle([40.67656681540903, 14.767214906170361], {
     color: '#acc4f7',
     fillColor: '#acc4f7',
@@ -393,11 +190,25 @@
   }
   L.control.watermark({position: 'topright'}).addTo(map);
 
-  //bottone login
+  //bottone
   L.Control.Watermark = L.Control.extend({
     onAdd: function(map) {
       var div = L.DomUtil.create('div', 'myDiv2');
-      div.innerHTML = '<button type="submit" class="btn btn-primary">Login</button>';
+      div.innerHTML = '<div class="toast show" style="border-color: blue">\n' +
+              '        <div class="toast-body">\n' +
+              '           <table>\n' +
+              '              <thead>\n' +
+              '              <tr>\n' +
+              '                <th><label class="mioLabel">Aiuta il responsabile Rosa. Via Roma, 7. Salerno</label></th>\n' +
+              '                <th><i class="fa fa-envelope icone" style="font-size:50px;color:#abc4f6;"></i> </th>\n' +
+              '              </tr>' +
+              '             <tr>\n' +
+              '              <th><label class="mioLabel">Ora può aiutarti il responsabile Giuseppe. Occupati della Scuola Media Statale Salvatore Quasimodo. Via Roma, 7. Salerno </label></th>\n' +
+              '              <th><i class="fa fa-envelope icone" style="font-size:50px;color:#c6a9e9;"></i></th>\n' +
+              '            </tr>\n' +
+              '              </thead>\n' +
+              '           </table>';
+
       return div;
     },
     onRemove: function(map) {
@@ -407,7 +218,7 @@
   L.control.watermark = function(opts) {
     return new L.Control.Watermark(opts);
   }
-  L.control.watermark({ position: 'bottomleft' }).addTo(map);
+  L.control.watermark({ position: 'topleft' }).addTo(map);
 
 </script>
 </body>
