@@ -89,27 +89,14 @@
 
             <tr>
               <th>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="width: 100%">
-                  Salva
-                </button>
+                <button type="button" onclick="successo1()" class="btn btn-primary" style="width: 100%">Salva</button>
               </th>
             </tr>
-
-            <div class="modal" id="myModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                  </div>
-                  <div class="modal-body" align="center">
-                    <p class="text-success">Salvataggio avvenuto con successo </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <tr>
+              <th>
+                <p id="successo1" class="text-success"></p>
+              </th>
+            </tr>
            </thead>
           </table>
         </div>
@@ -137,16 +124,23 @@
             <th><label for="luogo2">Luogo:</label><input type="text" class="form-control" id="luogo2" placeholder="" name="luogo2"><br></th>
             </th></tr></tr>
             <tr>
-              <th><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="width: 100%">Salva</button></th>
+              <th>
+                <button type="button" onclick="successo2()" class="btn btn-primary" style="width: 100%">Salva</button>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <p id="successo2" class="text-success"></p>
+              </th>
             </tr>
             </thead>
           </table>
         </div>
       </div> <br>
-      <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti" style="width: 100%">
+      <button type="button"id="mysuccesso2" onclick="prova2()" class="btn btn-primary" data-bs-toggle="popover" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti" style="width: 100%">
         Chiedi aiuto
       </button><br><br>
-      <a href="homeCollaborazione.html" class="btn btn-primary" style="width: 100%">Fine simulazione</a><br>
+      <a href="collaborazioneResponsabili.html" class="btn btn-primary" style="width: 100%">Fine simulazione</a><br>
       <br>
       <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#visualizzaDati" style="width: 100%">Visualizza dati inviati </button>
       <div id="visualizzaDati" class="collapse">
@@ -246,27 +240,14 @@
 
             <tr>
               <th>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2" style="width: 100%">
-                  Salva
-                </button>
+                <button type="button" onclick="successo3()" class="btn btn-primary" style="width: 100%">Salva</button>
               </th>
             </tr>
-
-            <div class="modal" id="myModal2">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                  </div>
-                  <div class="modal-body" align="center">
-                    <p class="text-success">Salvataggio avvenuto con successo </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <tr>
+              <th>
+                <p id="successo3" class="text-success"></p>
+              </th>
+            </tr>
             </thead>
           </table>
         </div>
@@ -287,23 +268,22 @@
                 <input type="number" class="form-control" id="feriti4" placeholder="" name="feriti4"></th>
             </tr>
             <tr>
-              <th><label for="feritiosp4"><h5>Feriti ospedalizzati</h5> <br> Numero:
-                <input type="text" class="form-control" id="feritiosp4" placeholder="" name="feritiosp4">
-              </label>
+              <th><label for="feritiosp4"><h5>Feriti ospedalizzati</h5> <br> Numero:<input type="text" class="form-control" id="feritiosp4" placeholder="" name="feritiosp4"></label>
             </tr>
             <th><label for="luogo4">Luogo:</label><input type="text" class="form-control" id="luogo4" placeholder="" name="luogo4"><br></th>
             </th></tr></tr>
-            <tr>
-              <th><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="width: 100%">Salva</button></th>
-            </tr>
+            <tr><th><button type="button" onclick="successo4()" class="btn btn-primary" style="width: 100%">Salva</button></th></tr>
+            <tr><th><p id="successo4" class="text-success"></p></th></tr>
             </thead>
           </table>
         </div>
       </div> <br>
-      <button type="button" class="btn btn-primary" data-bs-toggle="popover2" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti" style="width: 100%">
+
+
+      <button id="mysuccesso" onclick="prova()" type="button" class="btn btn-primary" data-bs-toggle="popover2" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti" style="width: 100%">
         Chiedi aiuto
       </button><br><br>
-      <a href="collaborazioneResponsabili.html" class="btn btn-primary" style="width: 100%">Fine simulazione</a><br><br>
+      <a href="homeCollaborazione.html" class="btn btn-primary" style="width: 100%">Fine simulazione</a><br><br>
       <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#visualizzaDati2" style="width: 100%">Visualizza dati inviati </button>
       <div id="visualizzaDati2" class="collapse">
         <div class="toast show" style="border-color: blue">
@@ -315,13 +295,13 @@
               <tr><th><label>Ritrovati: 20</label></tr>
               <tr><th><label>Feriti: 10</label></tr>
               <tr>
-                <th><label><h5>Ore 10:00</h5></label> </th>
+                <th><label><h5>Ore 10:00</h5></label></th>
               </tr>
               <tr>
-                <th><label>Ritrovati: 5</label> </th>
+                <th><label>Ritrovati: 5</label></th>
               </tr>
               <tr>
-                <th><label>Feriti ospedalizzati</label> </th>
+                <th><label>Feriti ospedalizzati</label></th>
               </tr>
               <tr>
                 <th><label> Numero: 2</label></th>
@@ -353,7 +333,27 @@
     </div>
   </div>
 </div>
+
 <script>
+  function prova() {
+    document.getElementById("mysuccesso").innerHTML = "Richiesta inviata";
+  }
+  function prova2() {
+    document.getElementById("mysuccesso2").innerHTML = "Richiesta inviata";
+  }
+  function successo1() {
+    document.getElementById("successo1").innerHTML = 'Dati salvati con successo';
+  }
+  function successo2() {
+    document.getElementById("successo2").innerHTML = 'Dati salvati con successo';
+  }
+  function successo3() {
+    document.getElementById("successo3").innerHTML = 'Dati salvati con successo';
+  }
+  function successo4() {
+    document.getElementById("successo4").innerHTML = 'Dati salvati con successo';
+  }
+
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
