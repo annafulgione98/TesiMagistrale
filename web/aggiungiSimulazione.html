@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="WEB-INF/css/style.css">
 </head>
 
+<script>
+    function successo2() {
+        document.getElementById("successo2").innerHTML = 'Dati salvati con successo';
+    }
+</script>
+
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
@@ -34,21 +40,17 @@
 <div>
     <div class="" style="text-align: center">
         <p class="name"><br><span class="w3-padding w3-theme-l1 w3-margin w3-round" style="font-weight: bolder; font-size: x-large; ">Inserisci dati simulazione</span></p><br>
-
     </div>
-
     <div class="container mt-3">
         <form action="/action_page.php">
             <div class="mb-3 mt-3">
                 <label for="luogo">Luogo:</label>
                 <input type="text" class="form-control" id="luogo"  name="luogo">
             </div>
-
             <div class="mb-3">
                 <label for="date">Data:</label>
                 <input type="text" class="form-control" id="date" placeholder="" name="date">
             </div>
-
             <div class="mb-3">
                 <label >Seleziona i responsabili:</label> <br>
                 <form action="/action_page.php" >
@@ -66,34 +68,10 @@
                     <label for="vehicle6"> Claudia</label><br><br>
                 </form>
             </div>
-
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="width:100%">Salva</button>
-
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-
-                        <div class="modal-body" align="center">
-                            <p class="text-success">Salvataggio avvenuto con successo </p>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+            <button type="button" onclick="successo2()" class="btn btn-primary" style="width: 100%">Salva</button>
+            <p id="successo2" class="text-success"></p>
         </form>
     </div>
-
 </div>
-
 </body>
 </html>
