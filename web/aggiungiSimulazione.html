@@ -45,39 +45,29 @@
             </div>
 
             <div class="mb-3">
-                <label for="data">Data:</label>
-                <input type="text" class="form-control" id="data" placeholder="" name="data">
-            </div>
-
-
-            <div class="mb-3">
-                <label>Responsabile 1 :</label>
-                <form>
-                    <select class="form-select mt-3">
-                        <option>Rosa</option>
-                        <option>Giuseppe</option>
-
-                    </select>
-                </form>
+                <label for="date">Data:</label>
+                <input type="text" class="form-control" id="date" placeholder="" name="date">
             </div>
 
             <div class="mb-3">
-                <label>Responsabile 2 :</label>
-                <form>
-                    <select class="form-select mt-3">
-                        <option>Giuseppe</option>
-                        <option>Rosa</option>
-
-                    </select>
+                <label >Seleziona i responsabili:</label> <br>
+                <form action="/action_page.php" >
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> Rosa</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> Giuseppe</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3"> Matteo</label><br>
+                    <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat">
+                    <label for="vehicle4"> Anna</label><br>
+                    <input type="checkbox" id="vehicle5" name="vehicle5" value="Boat">
+                    <label for="vehicle5"> Marco</label><br>
+                    <input type="checkbox" id="vehicle6" name="vehicle6" value="Boat">
+                    <label for="vehicle6"> Claudia</label><br><br>
                 </form>
             </div>
 
-            <div class="container mt-3" align="center">
-
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Salva
-                </button>
-            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="width:100%">Salva</button>
 
             <div class="modal" id="myModal">
                 <div class="modal-dialog">
