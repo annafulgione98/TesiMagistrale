@@ -88,11 +88,11 @@
 
   var markerRosaA = L.marker([40.677734, 14.765830]).addTo(map);
   var markerRosaB = L.marker([40.677724, 14.765899]).addTo(map);
-  markerRosaA.bindPopup("<b>Dispersi</b><br><table>\n" +
+  markerRosaA.bindPopup("<b>Dispersi Rosa</b><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp25 adulti, 78%</td></tr>\n"  +
           "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
-          "          <label class=\"mioLabel\"> <h6>Dati</h6> 30 adulti <br> Ancora dispersi 25 </label><br>\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati Adulti</h6> 30 adulti <br> Ancora dispersi 25 </label><br>\n" +
           "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
           "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
@@ -105,11 +105,11 @@
           "          <p id=\"successo1\" class=\"text-success\"></p>\n" +
           "        </div>\n" +
           "      </div>");
-  markerRosaB.bindPopup("<h5>Dispersi</h5><br><table>\n" +
+  markerRosaB.bindPopup("<h5>Dispersi Rosa</h5><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 45%</td></tr>\n" +
           "</table><br><div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
-          "          <label class=\"mioLabel\"> <h6>Dati</h6> 110 bambini <br> Ancora dispersi 50 </label>\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati Bambini</h6> 110 bambini <br> Ancora dispersi 50 </label>\n" +
           "          <label class=\"mioLabel\" for=\"ritrovati\"><br>Ritrovati:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
           "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
@@ -129,13 +129,13 @@
     radius: 10
   }).addTo(map);
 
-  var markerGiuseppeB = L.marker([40.67659505034865, 14.767130328471373]).addTo(map);
-  var markerGiuseppeA = L.marker([40.67656681540910, 14.767214906170361]).addTo(map);
-  markerGiuseppeB.bindPopup("<h5>Dispersi</h5><br><table>\n" +
+  var markerGiuseppeB = L.marker([40.67772232668952, 14.76580408146257]).addTo(map);
+  var markerGiuseppeA = L.marker([40.677704, 14.765881]).addTo(map);
+  markerGiuseppeB.bindPopup("<h5>Dispersi Giuseppe</h5><br><table>\n" +
           " <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 50%</td></tr>\n" +
           "</table><br><div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
-          "          <label class=\"mioLabel\"> <h6>Dati</h6> 100 bambini <br> Ancora dispersi 50 </label> <br>\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati Bambini</h6> 110 bambini <br> Ancora dispersi 50 </label> <br>\n" +
           "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
           "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
@@ -149,11 +149,11 @@
           "        </div>\n" +
           "      </div> <br>" +
           "");
-  markerGiuseppeA.bindPopup("<b>Dispersi</b><br><table>\n" +
+  markerGiuseppeA.bindPopup("<b>Dispersi Giuseppe</b><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp5 adulti, 25%</td></tr>\n"  +
           "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
-          "          <label class=\"mioLabel\"> <h6>Dati</h6> 20 adulti <br> Ancora dispersi 5 </label><br>\n" +
+          "          <label class=\"mioLabel\"> <h6>Dati Adulti</h6> 30 adulti <br> Ancora dispersi 5 </label><br>\n" +
           "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"\" name=\"ritrovati\">\n" +
           "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
@@ -167,28 +167,12 @@
           "        </div>\n" +
           "      </div>" +
           "");
-  var circleGiuseppe = L.circle([40.67656681540903, 14.767214906170361], {
+  var circleGiuseppe = L.circle([40.67772232668952, 14.76580408146257], {
     color: '#acc4f7',
     fillColor: '#acc4f7',
     fillOpacity: 0.9,
     radius: 10
   }).addTo(map);
-
-  L.Control.Watermark = L.Control.extend({
-    onAdd: function(map) {
-      var img = L.DomUtil.create('img');
-      img.src = 'WEB-INF/img/RosaGiuseppe.png';
-      img.style.width = '100px';
-      return img;
-    },
-    onRemove: function(map) {
-      // Nothing to do here
-    }
-  });
-  L.control.watermark = function(opts) {
-    return new L.Control.Watermark(opts);
-  }
-  L.control.watermark({position: 'topright'}).addTo(map);
 
   //bottone
   L.Control.Watermark = L.Control.extend({
@@ -218,7 +202,23 @@
   L.control.watermark = function(opts) {
     return new L.Control.Watermark(opts);
   }
-  L.control.watermark({ position: 'topleft' }).addTo(map);
+  L.control.watermark({ position: 'topright' }).addTo(map);
+
+  L.Control.Watermark = L.Control.extend({
+    onAdd: function(map) {
+      var img = L.DomUtil.create('img');
+      img.src = 'WEB-INF/img/RosaGiuseppe.png';
+      img.style.width = '100px';
+      return img;
+    },
+    onRemove: function(map) {
+      // Nothing to do here
+    }
+  });
+  L.control.watermark = function(opts) {
+    return new L.Control.Watermark(opts);
+  }
+  L.control.watermark({position: 'topright'}).addTo(map);
 
 </script>
 </body>
