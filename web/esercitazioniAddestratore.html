@@ -128,7 +128,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                Attenzione!
+                                <strong>Attenzione!</strong>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body" align="center">
@@ -176,29 +176,23 @@
                 <td>Rosa, Giuseppe</td>
                 <td><a href="statisticheAddestratore.html" class="btn btn-primary">Visualizza</a></td>
                 <div class="container mt-3" align="center">
-
-                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ripetiModal">
-                        Ripeti
-                    </button></td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ripetiModal">Ripeti</button></td>
                 </div>
 
                 <div class="modal" id="ripetiModal">
                     <div class="modal-dialog">
                         <div class="modal-content">
-
                             <div class="modal-header">
+                                <strong>Attenzione!</strong>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
-
-
                             <div class="modal-body" align="center">
-                                <p class="text-success">Esercitazione riavviata con successo </p>
+                                <label>Sei sicuro di voler iniziare l'esercitazione? </label>
                             </div>
-
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="button"  class="btn btn-primary" data-bs-dismiss="modal" onclick="iniziaEsercitazione()">Si, inizia</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Chiudi</button>
                             </div>
-
                         </div>
                     </div>
                 </div>

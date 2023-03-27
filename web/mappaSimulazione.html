@@ -40,18 +40,11 @@
 </head>
 <body>
 
-
 <div>
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary" data-bs-toggle="popover2" title="Richiesta di aiuto inviata" data-bs-content="Appena un gruppo si libera procederà ad aiutarti">Chiedi aiuto</button>
-    <a href="collaborazioneResponsabili.html" class="btn btn-primary">Fine simulazione</a>
-  </div>
   <div class="myDivForMap">
     <div id="map"> </div>
   </div>
-
 </div>
-
 
 <script>
   function successo1() {
@@ -66,6 +59,13 @@
   function successo4() {
     document.getElementById("successo4").innerHTML = 'Dati salvati con successo';
   }
+  function chiediAiuto1() {
+    document.getElementById("chiediAiuto1").innerHTML = 'Richiesta di aiuto inviata con successo';
+  }
+  function chiediAiuto2() {
+    document.getElementById("chiediAiuto2").innerHTML = 'Richiesta di aiuto inviata con successo';
+  }
+
 
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -86,7 +86,7 @@
   }).addTo(map);
 
   var markerRosaA = L.marker([40.677734, 14.765830]).addTo(map);
-  var markerRosaB = L.marker([40.677724, 14.765899]).addTo(map);
+
   markerRosaA.bindPopup("<b>Dispersi Rosa</b><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp25 adulti, 78%</td></tr>\n"  +
           "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
@@ -103,8 +103,7 @@
           "          <button type=\"button\" onclick=\"successo1()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
           "          <p id=\"successo1\" class=\"text-success\"></p>\n" +
           "        </div>\n" +
-          "      </div>");
-  markerRosaB.bindPopup("<h5>Dispersi Rosa</h5><br><table>\n" +
+          "      </div><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 45%</td></tr>\n" +
           "</table><br><div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
@@ -119,9 +118,12 @@
           "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"\" name=\"luogo\"><br></th>\n" +
           "          <button type=\"button\" onclick=\"successo2()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
           "          <p id=\"successo2\" class=\"text-success\"></p>\n" +
-          "        </div>\n" +
-          "      </div> ");
-  var circleRosa = L.circle([40.677724, 14.765899], {
+          "        </div> </div> <br><br>" +
+          " <button type=\"button\" onclick=\"chiediAiuto1()\" class=\"btn btn-primary\" style=\"width: 100%\">Chiedi Aiuto</button>\n" +
+          "          <p id=\"chiediAiuto1\" class=\"text-success\"></p>\n" +
+          "  <a href=\"collaborazioneResponsabili.html\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</a>\n"
+          );
+  var circleRosa = L.circle([40.677734, 14.765830], {
     color: '#c6a9ea',
     fillColor: '#c6a9ea',
     fillOpacity: 0.9,
@@ -129,7 +131,6 @@
   }).addTo(map);
 
   var markerGiuseppeB = L.marker([40.67659505034865, 14.767130328471373]).addTo(map);
-  var markerGiuseppeA = L.marker([40.67656681540910, 14.767214906170361]).addTo(map);
   markerGiuseppeB.bindPopup("<h5>Dispersi Giuseppe</h5><br><table>\n" +
           " <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 50%</td></tr>\n" +
           "</table><br><div class=\"toast show\" style=\"border-color: blue\">\n" +
@@ -146,9 +147,7 @@
           "          <button type=\"button\" onclick=\"successo3()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
           "          <p id=\"successo3\" class=\"text-success\"></p>\n" +
           "        </div>\n" +
-          "      </div> <br>" +
-          "");
-  markerGiuseppeA.bindPopup("<b>Dispersi Giuseppe</b><br><table>\n" +
+          "      </div> <br> <table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp5 adulti, 25%</td></tr>\n"  +
           "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
@@ -164,9 +163,12 @@
           "          <button type=\"button\" onclick=\"successo4()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
           "          <p id=\"successo4\" class=\"text-success\"></p>\n" +
           "        </div>\n" +
-          "      </div>" +
-          "");
-  var circleGiuseppe = L.circle([40.67656681540903, 14.767214906170361], {
+          "      </div> <br>  <button type=\"button\" onclick=\"chiediAiuto2()\" class=\"btn btn-primary\" style=\"width: 100%\">Chiedi Aiuto</button>\n" +
+          "            <p id=\"chiediAiuto2\" class=\"text-success\"></p>\n" +
+          "    <a href=\"collaborazioneResponsabili.html\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</a>\n")
+
+
+  var circleGiuseppe = L.circle([40.67659505034865, 14.767130328471373], {
     color: '#acc4f7',
     fillColor: '#acc4f7',
     fillOpacity: 0.9,
