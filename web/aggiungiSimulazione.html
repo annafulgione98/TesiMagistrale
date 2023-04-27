@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="WEB-INF/css/style.css">
 </head>
 
-<script>
-    function successo2() {
-        document.getElementById("successo2").innerHTML = 'Dati salvati con successo';
-    }
-</script>
-
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
@@ -45,11 +39,11 @@
         <form action="/action_page.php">
             <div class="mb-3 mt-3">
                 <label for="luogo">Luogo:</label>
-                <input type="text" class="form-control" id="luogo"  name="luogo">
+                <input type="text" class="form-control" id="luogo" placeholder="Salerno" name="luogo">
             </div>
             <div class="mb-3">
                 <label for="date">Data:</label>
-                <input type="text" class="form-control" id="date" placeholder="" name="date">
+                <input type="text" class="form-control" id="date" placeholder="10-04-2023" name="date">
             </div>
             <div class="mb-3">
                 <label >Seleziona i responsabili:</label> <br>
@@ -67,11 +61,40 @@
                     <input type="checkbox" id="vehicle6" name="vehicle6" value="Boat">
                     <label for="vehicle6"> Claudia</label><br><br>
                 </form>
+
+                <div class="container mt-3" align="center">
+                    <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Salva
+                    </button> </td>
+                </div>
             </div>
-            <button type="button" onclick="successo2()" class="btn btn-primary" style="width: 100%">Salva</button>
-            <p id="successo2" class="text-success"></p>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong>Attenzione!</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body" align="center">
+                            <label>Sei sicuro di voler inserire l'esercitazione? </label>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button"  class="btn btn-primary" data-bs-dismiss="modal" onclick="salvaEsercitazione()">Si, salva</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Chiudi</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </div>
+<script>
+    document.getElementById("salvaEsercitazione").style.display="none";
+    function iniziaEsercitazione(){
+        document.getElementById("salvaEsercitazione").style.display="block";
+    }
+</script>
 </body>
 </html>
