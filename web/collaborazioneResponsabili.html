@@ -96,14 +96,26 @@
 
   function sicuro5() {
     document.getElementById("sicuro5").style.display="block";
+    document.getElementById("successo5").style.display= "none";
   }
   function annulla5() {
+    document.getElementById("sicuro5").style.display="none";
+    document.getElementById("successo5").style.display= "none";
+  }
+  function successo5() {
+    document.getElementById("successo5").style.display= "block";
     document.getElementById("sicuro5").style.display="none";
   }
   function sicuro6() {
     document.getElementById("sicuro6").style.display="block";
+    document.getElementById("successo6").style.display= "none";
   }
   function annulla6() {
+    document.getElementById("sicuro6").style.display="none";
+    document.getElementById("successo6").style.display= "none";
+  }
+  function successo6() {
+    document.getElementById("successo6").style.display= "block";
     document.getElementById("sicuro6").style.display="none";
   }
 
@@ -164,8 +176,9 @@
           " <button type=\"button\" onclick=\"this.innerHTML='Annulla richiesta di aiuto'\" class=\"btn btn-primary\" style=\"width: 100%\">Chiedi Aiuto</button>\n" +
           "          <p id=\"chiediAiuto1\" class=\"text-success\"></p>\n" +
           "<button onclick=\"sicuro6()\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</button>\n" +
-          "  <p id=\"sicuro6\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <a href='collaborazioneResponsabili.html' class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
-          "    <br><button onclick=\"annulla6()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> "
+          "  <p id=\"sicuro6\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <button onclick=\"successo6()\" class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
+          "    <br><button onclick=\"annulla6()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> "+
+          "<p id=\"successo6\" style='display:none' class=\"text-success\"> Simulazione terminata</p>\n"
   );
   var circleRosa = L.circle([40.677734, 14.765830], {
     color: '#c6a9ea',
@@ -212,8 +225,9 @@
           "      </div> <br>  <button type=\"button\" onclick=\"this.innerHTML='Annulla richiesta di aiuto'\" class=\"btn btn-primary\" style=\"width: 100%\">Chiedi Aiuto</button>\n" +
           "            <p id=\"chiediAiuto2\" class=\"text-success\"></p>\n" +
           "    <button onclick=\"sicuro5()\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</button>\n" +
-          "  <p id=\"sicuro5\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <a href='collaborazioneResponsabili.html' class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
-          "    <br><button onclick=\"annulla5()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> ")
+          "  <p id=\"sicuro5\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <button onclick=\"successo5()\"class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
+          "    <br><button onclick=\"annulla5()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> " +
+          "<p id=\"successo5\" style='display:none' class=\"text-success\"> Simulazione terminata</p>\n")
 
 
 
