@@ -98,20 +98,16 @@
 
   function sicuro5() {
     document.getElementById("sicuro5").style.display="block";
-    document.getElementById("successo5").style.display= "none";
   }
   function annulla5() {
     document.getElementById("sicuro5").style.display="none";
-    document.getElementById("successo5").style.display= "none";
   }
-
-  function chiediAiuto1() {
-    document.getElementById("chiediAiuto1").innerHTML = 'Richiesta di aiuto inviata con successo';
+  function sicuro6() {
+    document.getElementById("sicuro6").style.display="block";
   }
-  function chiediAiuto2() {
-    document.getElementById("chiediAiuto2").innerHTML = 'Richiesta di aiuto inviata con successo';
+  function annulla6() {
+    document.getElementById("sicuro6").style.display="none";
   }
-
 
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -133,7 +129,7 @@
 
   var markerRosaA = L.marker([40.677734, 14.765830]).addTo(map);
 
-  markerRosaA.bindPopup("<b>Dispersi Rosa</b><br><table>\n" +
+  markerRosaA.bindPopup("<h5>Dispersi Rosa</h5><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp25 adulti, 78%</td></tr>\n"  +
           "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
@@ -169,9 +165,9 @@
           "        </div> </div> <br><br>" +
           " <button type=\"button\" onclick=\"this.innerHTML='Annulla richiesta di aiuto'\" class=\"btn btn-primary\" style=\"width: 100%\">Chiedi Aiuto</button>\n" +
           "          <p id=\"chiediAiuto1\" class=\"text-success\"></p>\n" +
-          "<button onclick=\"sicuro5()\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</button>\n" +
-          "  <p id=\"sicuro5\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <a href='collaborazioneResponsabili.html' class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
-          "    <br><button onclick=\"annulla5()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> "
+          "<button onclick=\"sicuro6()\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</button>\n" +
+          "  <p id=\"sicuro6\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <a href='collaborazioneResponsabili.html' class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
+          "    <br><button onclick=\"annulla6()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> "
           );
   var circleRosa = L.circle([40.677734, 14.765830], {
     color: '#c6a9ea',

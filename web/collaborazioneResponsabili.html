@@ -46,29 +46,65 @@
 
 <script>
   function successo1() {
-    document.getElementById("successo1").innerHTML = 'Dati salvati con successo';
+    document.getElementById("successo1").style.display= "block";
+    document.getElementById("sicuro1").style.display="none";
+  }
+  function sicuro1() {
+    document.getElementById("sicuro1").style.display="block";
+    document.getElementById("successo1").style.display= "none";
+  }
+  function annulla1() {
+    document.getElementById("sicuro1").style.display="none";
+    document.getElementById("successo1").style.display= "none";
   }
   function successo2() {
-    document.getElementById("successo2").innerHTML = 'Dati salvati con successo';
+    document.getElementById("successo2").style.display= "block";
+    document.getElementById("sicuro2").style.display="none";
+  }
+  function sicuro2() {
+    document.getElementById("sicuro2").style.display="block";
+    document.getElementById("successo2").style.display= "none";
+  }
+  function annulla2() {
+    document.getElementById("sicuro2").style.display="none";
+    document.getElementById("successo2").style.display= "none";
   }
   function successo3() {
-    document.getElementById("successo3").innerHTML = 'Dati salvati con successo';
+    document.getElementById("successo3").style.display= "block";
+    document.getElementById("sicuro3").style.display="none";
+  }
+  function sicuro3() {
+    document.getElementById("sicuro3").style.display="block";
+    document.getElementById("successo3").style.display= "none";
+  }
+  function annulla3() {
+    document.getElementById("sicuro3").style.display="none";
+    document.getElementById("successo3").style.display= "none";
   }
   function successo4() {
-    document.getElementById("successo4").innerHTML = 'Dati salvati con successo';
+    document.getElementById("successo4").style.display= "block";
+    document.getElementById("sicuro4").style.display="none";
   }
-  function chiediAiuto1() {
-    document.getElementById("chiediAiuto1").innerHTML = 'Richiesta di aiuto inviata con successo';
+  function sicuro4() {
+    document.getElementById("sicuro4").style.display="block";
+    document.getElementById("successo4").style.display= "none";
+  }
+  function annulla4() {
+    document.getElementById("sicuro4").style.display="none";
+    document.getElementById("successo4").style.display= "none";
   }
 
-  function chiediAiuto2() {
-    document.getElementById("chiediAiuto2").innerHTML = 'Richiesta di aiuto inviata con successo';
+  function sicuro5() {
+    document.getElementById("sicuro5").style.display="block";
   }
-  function fineSimulazione1() {
-    document.getElementById("fineSimulazione1").innerHTML = 'Simulazione finita';
+  function annulla5() {
+    document.getElementById("sicuro5").style.display="none";
   }
-  function fineSimulazione2() {
-    document.getElementById("fineSimulazione2").innerHTML = 'Simulazione finita';
+  function sicuro6() {
+    document.getElementById("sicuro6").style.display="block";
+  }
+  function annulla6() {
+    document.getElementById("sicuro6").style.display="none";
   }
 
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover1"]'))
@@ -91,7 +127,7 @@
 
   var markerRosaA = L.marker([40.677734, 14.765830]).addTo(map);
 
-  markerRosaA.bindPopup("<b>Dispersi Rosa</b><br><table>\n" +
+  markerRosaA.bindPopup("<h5>Dispersi Rosa</h5><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp25 adulti, 78%</td></tr>\n"  +
           "</table><br> <div class=\"toast show\" style=\"border-color: blue\">\n" +
           "        <div class=\"toast-body\">\n" +
@@ -99,13 +135,14 @@
           "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"3\" name=\"ritrovati\">\n" +
           "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
-          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"1\" name=\"feriti\">\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"3\" name=\"feriti\">\n" +
           "          <label class=\"mioLabel\" for=\"feritiosp\">Feriti ospedalizzati  <br> Numero:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"1\" name=\"feritiosp\">\n" +
           "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
           "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"Ospedale Ruggi\" name=\"luogo\"><br></th>\n" +
-          "          <button type=\"button\" onclick=\"successo1()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
-          "          <p id=\"successo1\" class=\"text-success\"></p>\n" +
+          "         <button type=\"button\" onclick=\"sicuro1()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "<p id=\"sicuro1\" style='display:none'> Sei sicuro di voler salvare i dati?<br><button onclick=\"successo1()\" class=\"btn btn-success\" style=\"width: 100%\">Conferma</button> <br><button onclick=\"annulla1()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button> </p>\n          " +
+          "<p id=\"successo1\" style='display:none' class=\"text-success\"> Dati salvati con successo</p>\n" +
           "        </div>\n" +
           "      </div><br><table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp50 bambini, 45%</td></tr>\n" +
@@ -115,18 +152,20 @@
           "          <label class=\"mioLabel\" for=\"ritrovati\"><br>Ritrovati:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"3\" name=\"ritrovati\">\n" +
           "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
-          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"2\" name=\"feriti\">\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"3\" name=\"feriti\">\n" +
           "          <label class=\"mioLabel\" for=\"feritiosp\">Feriti ospedalizzati  <br> Numero:</label>\n" +
-          "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"1\" name=\"feritiosp\">\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"3\" name=\"feritiosp\">\n" +
           "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
           "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"Ospedale Ruggi\" name=\"luogo\"><br></th>\n" +
-          "          <button type=\"button\" onclick=\"successo2()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
-          "          <p id=\"successo2\" class=\"text-success\"></p>\n" +
+          "          <button type=\"button\" onclick=\"sicuro2()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "<p id=\"sicuro2\" style='display:none'> Sei sicuro di voler salvare i dati?<br><button onclick=\"successo2()\" class=\"btn btn-success\" style=\"width: 100%\">Conferma</button> <br><button onclick=\"annulla2()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button> </p>\n          " +
+          "<p id=\"successo2\" style='display:none' class=\"text-success\"> Dati salvati con successo</p>\n" +
           "        </div> </div> <br><br>" +
-          " <button type=\"button\" onclick=\"chiediAiuto1()\" class=\"btn btn-primary\" style=\"width: 100%\" disabled>Chiedi Aiuto</button>\n" +
+          " <button type=\"button\" onclick=\"this.innerHTML='Annulla richiesta di aiuto'\" class=\"btn btn-primary\" style=\"width: 100%\">Chiedi Aiuto</button>\n" +
           "          <p id=\"chiediAiuto1\" class=\"text-success\"></p>\n" +
-          "<button type=\"button\" onclick=\"fineSimulazione1()\" class=\"btn btn-primary\" style=\"width: 100%\">Fine Simulazione</button>\n" +
-          "         <p id=\"fineSimulazione1\" class=\"text-success\"></p>\n"
+          "<button onclick=\"sicuro6()\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</button>\n" +
+          "  <p id=\"sicuro6\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <a href='collaborazioneResponsabili.html' class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
+          "    <br><button onclick=\"annulla6()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> "
   );
   var circleRosa = L.circle([40.677734, 14.765830], {
     color: '#c6a9ea',
@@ -144,13 +183,14 @@
           "          <label class=\"mioLabel\" for=\"ritrovati\">Ritrovati:</label>\n" +
           "            <input type=\"number\" class=\"form-control\" id=\"ritrovati\" placeholder=\"3\" name=\"ritrovati\">\n" +
           "          <label class=\"mioLabel\" for=\"feriti\">Feriti:</label>\n" +
-          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"2\" name=\"feriti\">\n" +
+          "            <input type=\"number\" class=\"form-control\" id=\"feriti\" placeholder=\"1\" name=\"feriti\">\n" +
           "          <label class=\"mioLabel\" for=\"feritiosp\">Feriti ospedalizzati <br> Numero:\n </label>" +
           "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"1\" name=\"feritiosp\">\n" +
           "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
           "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"Ospedale Ruggi\" name=\"luogo\"><br></th>\n" +
-          "          <button type=\"button\" onclick=\"successo3()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
-          "          <p id=\"successo3\" class=\"text-success\"></p>\n" +
+          "          <button type=\"button\" onclick=\"sicuro3()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "<p id=\"sicuro3\" style='display:none'> Sei sicuro di voler salvare i dati?<br><button onclick=\"successo3()\" class=\"btn btn-success\" style=\"width: 100%\">Conferma</button> <br><button onclick=\"annulla3()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button> </p>\n          " +
+          "<p id=\"successo3\" style='display:none' class=\"text-success\"> Dati salvati con successo</p>\n" +
           "        </div>\n" +
           "      </div> <br> <table>\n" +
           "  <tr><td><div class=\"giallo\"></div></td><td>&nbsp5 adulti, 25%</td></tr>\n"  +
@@ -165,13 +205,16 @@
           "            <input type=\"number\" class=\"form-control\" id=\"feritiosp\" placeholder=\"1\" name=\"feritiosp\">\n" +
           "          <label class=\"mioLabel\" for=\"luogo\">Luogo:</label>\n" +
           "              <input type=\"text\" class=\"form-control\" id=\"luogo\" placeholder=\"Ospedale Ruggi\" name=\"luogo\"><br></th>\n" +
-          "          <button type=\"button\" onclick=\"successo4()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
-          "          <p id=\"successo4\" class=\"text-success\"></p>\n" +
+          "          <button type=\"button\" onclick=\"sicuro4()\" class=\"btn btn-primary\" style=\"width: 100%\">Salva</button>\n" +
+          "<p id=\"sicuro4\" style='display:none'> Sei sicuro di voler salvare i dati?<br><button onclick=\"successo4()\" class=\"btn btn-success\" style=\"width: 100%\">Conferma</button> <br><button onclick=\"annulla4()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button> </p>\n          " +
+          "<p id=\"successo4\" style='display:none' class=\"text-success\"> Dati salvati con successo</p>\n" +
           "        </div>\n" +
-          "      </div> <br>  <button type=\"button\" onclick=\"chiediAiuto2()\" class=\"btn btn-primary\" style=\"width: 100%\" disabled>Chiedi Aiuto</button>\n" +
+          "      </div> <br>  <button type=\"button\" onclick=\"this.innerHTML='Annulla richiesta di aiuto'\" class=\"btn btn-primary\" style=\"width: 100%\">Chiedi Aiuto</button>\n" +
           "            <p id=\"chiediAiuto2\" class=\"text-success\"></p>\n" +
-          "   <button type=\"button\" onclick=\"fineSimulazione2()\" class=\"btn btn-primary\" style=\"width: 100%\">Fine Simulazione</button>\n" +
-          "            <p id=\"fineSimulazione2\" class=\"text-success\"></p>\n")
+          "    <button onclick=\"sicuro5()\" class=\"btn btn-primary\" style=\"width:100%; color: white\">Fine simulazione</button>\n" +
+          "  <p id=\"sicuro5\" style='display:none'> Sei sicuro di voler finire l'esercitazione? <a href='collaborazioneResponsabili.html' class=\"btn btn-success\" style=\"width:100%; color: white\">Conferma</a>" +
+          "    <br><button onclick=\"annulla5()\" class=\"btn btn-danger\" style=\"width: 100%\">Annulla</button></p> ")
+
 
 
   var circleGiuseppe = L.circle([40.677704, 14.765881], {
